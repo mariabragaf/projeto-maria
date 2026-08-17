@@ -2,7 +2,7 @@ import { Link } from "expo-router";
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-const minhaFoto = require("../../assets/maria.jpg");
+const codeverseLogo = require("../../assets/codeverse-logo.png");
 
 export default function HomeScreen() {
   return (
@@ -10,12 +10,12 @@ export default function HomeScreen() {
       <View style={styles.container}>
         <View style={styles.hero}>
           <Image
-            source={minhaFoto}
+            source={codeverseLogo}
             style={styles.logo}
             resizeMode="contain"
           />
-          <Text style={styles.eyebrow}>Maria Eduarda</Text>
-          <Text style={styles.title}>Dev Junior</Text>
+          <Text style={styles.eyebrow}>React Native + Expo Router</Text>
+          <Text style={styles.title}>Seu app já nasce organizado</Text>
           <Text style={styles.description}>
             Estrutura pronta para o aluno focar em componentes, navegação e
             lógica de negócio desde a primeira aula.
@@ -43,7 +43,7 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: "#e9c4ff",
+    backgroundColor: "#f8fbff",
   },
   container: {
     flex: 1,
@@ -55,59 +55,58 @@ const styles = StyleSheet.create({
     gap: 10,
     padding: 24,
     borderRadius: 24,
-    backgroundColor: "#bb6be9",
+    backgroundColor: "#0f62fe",
   },
   logo: {
     width: 120,
     height: 120,
-    marginBottom: 10,
-    borderRadius: 70,
+    marginBottom: 4,
   },
   eyebrow: {
     fontSize: 13,
     fontWeight: "700",
     letterSpacing: 1,
     textTransform: "uppercase",
-    color: "#f7e9ff",
+    color: "#d0e2ff",
     textAlign: "center",
   },
   title: {
     fontSize: 32,
     fontWeight: "800",
-    color: "#8e42b9",
+    color: "#ffffff",
     textAlign: "center",
   },
   description: {
     fontSize: 16,
     lineHeight: 24,
-    color: "#f7e9ff",
+    color: "#edf5ff",
     textAlign: "center",
   },
   card: {
     gap: 8,
     padding: 20,
     borderRadius: 20,
-    backgroundColor: "#f7e9ff",
+    backgroundColor: "#ffffff",
   },
   cardTitle: {
     fontSize: 18,
     fontWeight: "700",
-    color: "#8e42b9",
+    color: "#102542",
   },
   cardItem: {
     fontSize: 15,
-    color: "#26083b",
+    color: "#334e68",
   },
   button: {
     paddingVertical: 16,
     paddingHorizontal: 20,
     borderRadius: 16,
     alignItems: "center",
-    backgroundColor: "#bb6be9",
+    backgroundColor: "#102542",
   },
   buttonText: {
     fontSize: 16,
     fontWeight: "700",
-    color: "#e0b4fa",
+    color: "#ffffff",
   },
 });
