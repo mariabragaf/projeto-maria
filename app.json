@@ -1,0 +1,16 @@
+{
+  "expo": {
+    "name": "projeto-maria",
+    "slug": "projeto-maria",
+    "scheme": "projeto-maria",
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
