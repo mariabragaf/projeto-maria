@@ -75,13 +75,31 @@ export default function HeroisListarScreen() {
 }
 
 const styles = StyleSheet.create({
-  safeArea: { flex: 1, backgroundColor: "#e8bfff" },
-  conteudo: { padding: 24, paddingBottom: 48 },
-  header: { marginBottom: 16 },
-  tituloPagina: { fontSize: 24, fontWeight: "800", color: "#4e2466" },
-  subtitulo: { fontSize: 14, color: "#4e2466", marginTop: 2 },
-
-  erro: { color: "#c62828", marginTop: 12 },
+  safeArea: { 
+    flex: 1, 
+    backgroundColor: "#e8bfff" 
+  },
+  conteudo: { 
+    padding: 24, 
+    paddingBottom: 48 
+  },
+  header: { 
+    marginBottom: 16 
+  },
+  tituloPagina: { 
+    fontSize: 24, 
+    fontWeight: "800", 
+    color: "#4e2466" 
+  },
+  subtitulo: { 
+    fontSize: 14, 
+    color: "#4e2466", 
+    marginTop: 2 
+  },
+  erro: { 
+    color: "#c62828", 
+    marginTop: 12 
+  },
   card: {
     flexDirection: "row",
     gap: 12,
@@ -90,8 +108,21 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     overflow: "hidden",
   },
-  imagem: { width: 64, height: 64 },
-  info: { flex: 1, justifyContent: "center", paddingRight: 12 },
-  titulo: { fontSize: 16, fontWeight: "700" },
-  categoria: { fontSize: 13, color: "#64748b" },
+  imagem: { 
+    width: 64, 
+    height: 64 
+  },
+  info: { 
+    flex: 1, 
+    justifyContent: "center", 
+    paddingRight: 12 
+  },
+  titulo: { 
+    fontSize: 16, 
+    fontWeight: "700" 
+  },
+  categoria: { 
+    fontSize: 13, 
+    color: "#64748b" 
+  },
 });

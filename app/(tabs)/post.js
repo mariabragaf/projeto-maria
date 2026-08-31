@@ -122,11 +122,26 @@ export default function HeroisCriarScreen() {
 }
 
 const styles = StyleSheet.create({
-  safeArea: { flex: 1, backgroundColor: "#e8bfff" },
-  conteudo: { padding: 24, paddingBottom: 48 },
-  header: { marginBottom: 16 },
-  tituloPagina: { fontSize: 24, fontWeight: "800", color: "#4e2466" },
-  subtitulo: { fontSize: 14, color: "#4e2466", marginTop: 2 },
+  safeArea: { 
+    flex: 1, 
+    backgroundColor: "#e8bfff" 
+},
+  conteudo: { 
+    padding: 24, 
+    paddingBottom: 48 
+  },
+  header: { 
+    marginBottom: 16 
+},
+  tituloPagina: { 
+    fontSize: 24, 
+    fontWeight: "800", 
+    color: "#4e2466" 
+},
+  subtitulo: { 
+    fontSize: 14, 
+    color: "#4e2466", 
+    marginTop: 2 },
   secao: {
     fontSize: 14,
     fontWeight: "700",
@@ -134,8 +149,12 @@ const styles = StyleSheet.create({
     marginTop: 8,
     marginBottom: 8,
   },
-
-  rotulo: { fontSize: 13, fontWeight: "600", color: "#faf3fe", marginBottom: 4 },
+  rotulo: { 
+    fontSize: 13, 
+    fontWeight: "600", 
+    color: "#faf3fe", 
+    marginBottom: 4 
+},
   campo: {
     borderWidth: 1,
     borderColor: "#4e2466",
