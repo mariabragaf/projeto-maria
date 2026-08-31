@@ -14,18 +14,18 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#e8bfff",
+    backgroundColor: "#fbf6e5",
     justifyContent: "center",
     alignItems: "center",
   },
   title: {
     fontSize: 22,
     fontWeight: "bold",
-    color: "#8e42b9",
+    color: "#C96B88",
   },
   subtitle: {
     fontSize: 14,
-    color: "#faf3fe",
+    color:  "#8A6D73",
     marginTop: 8,
   },
 });

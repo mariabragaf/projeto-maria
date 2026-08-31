@@ -1,5 +1,5 @@
 import { Link } from "expo-router";
-import { Image, Pressable, StyleSheet, Text, View } from "react-native";
+import { Image, Pressable, StyleSheet, Text, View, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const codeverseLogo = require("../../assets/codeverse-logo.png");
@@ -7,7 +7,7 @@ const codeverseLogo = require("../../assets/codeverse-logo.png");
 export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.safeArea}>
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <View style={styles.hero}>
           <Image
             source={codeverseLogo}
@@ -35,7 +35,7 @@ export default function HomeScreen() {
             <Text style={styles.buttonText}>Abrir modal de exemplo</Text>
           </Pressable>
         </Link>
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }
@@ -43,19 +43,20 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: "#e8bfff",
+    backgroundColor:  "#fbf6e5",
   },
   container: {
     flex: 1,
     padding: 24,
-    gap: 20,
+
   },
   hero: {
     alignItems: "center",
     gap: 10,
     padding: 24,
     borderRadius: 24,
-    backgroundColor: "#bb6be9",
+    backgroundColor: "#DD8FA0",
+     marginBottom: 30,
   },
   logo: {
     width: 120,
@@ -67,7 +68,7 @@ const styles = StyleSheet.create({
     fontWeight: "700",
     letterSpacing: 1,
     textTransform: "uppercase",
-    color: "#bb6be9",
+    color:  "#4A3840",
     textAlign: "center",
   },
   title: {
@@ -79,7 +80,7 @@ const styles = StyleSheet.create({
   description: {
     fontSize: 16,
     lineHeight: 24,
-    color: "#4d1e68",
+    color:  "#4A3840",
     textAlign: "center",
   },
   card: {
@@ -87,22 +88,24 @@ const styles = StyleSheet.create({
     padding: 20,
     borderRadius: 20,
     backgroundColor: "#ffffff",
+     marginBottom: 30,
   },
   cardTitle: {
     fontSize: 18,
     fontWeight: "700",
-    color: "#bb6be9",
+    color:  "#C96B88",
   },
   cardItem: {
     fontSize: 15,
-    color: "#0a0a0a",
+    color: "#4A3840",
   },
   button: {
     paddingVertical: 16,
     paddingHorizontal: 20,
     borderRadius: 16,
     alignItems: "center",
-    backgroundColor: "#733b94",
+    backgroundColor: "#C96B88",
+     marginBottom: 30,
   },
   buttonText: {
     fontSize: 16,

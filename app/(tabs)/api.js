@@ -77,7 +77,7 @@ export default function FilmesListarScreen() {
 const styles = StyleSheet.create({
   safeArea: { 
     flex: 1, 
-    backgroundColor: "#e8bfff" 
+    backgroundColor:  "#fbf6e5" 
   },
   conteudo: { 
     padding: 24, 
@@ -89,22 +89,22 @@ const styles = StyleSheet.create({
   tituloPagina: { 
     fontSize: 24, 
     fontWeight: "800", 
-    color: "#4e2466" 
+    color: "#4A3840" 
   },
   subtitulo: { 
     fontSize: 14, 
-    color: "#4e2466", 
+    color: "#C96B88", 
     marginTop: 2 
   },
   erro: { 
-    color: "#c62828", 
+    color:  "#C96B88", 
     marginTop: 12 
   },
   card: {
     flexDirection: "row",
     gap: 12,
     marginTop: 12,
-    backgroundColor: "white",
+    backgroundColor: "#FFFFFF",
     borderRadius: 10,
     overflow: "hidden",
   },
@@ -119,10 +119,11 @@ const styles = StyleSheet.create({
   },
   titulo: { 
     fontSize: 16, 
-    fontWeight: "700" 
+    fontWeight: "700",
+    color:"#4A3840"
   },
   categoria: { 
     fontSize: 13, 
-    color: "#64748b" 
+    color: "#8A6D73" 
   },
 });

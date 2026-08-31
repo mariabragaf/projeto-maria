@@ -17,7 +17,7 @@ export default function HomeScreen() {
 
           <Text style={styles.title}>Maria Eduarda Braga Ferreira</Text>
           <Text style={styles.description}>
-            Estudante de Desenvolvimento de Software, apaixonada por criar experiências digitais através de código, do front-end ao mobile.
+            Estudante de Desenvolvimento de Sistemas. Apaixonada por criar experiências digitais através de código, do front-end ao mobile.
           </Text>
         </View>
 
@@ -43,19 +43,19 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: "#e8bfff",
+    backgroundColor: "#fbf6e5",
   },
   container: {
     flex: 1,
     padding: 24,
-    gap: 20,
   },
   hero: {
     alignItems: "center",
     gap: 10,
     padding: 100,
     borderRadius: 24,
-    backgroundColor: "#bb6be9",
+    backgroundColor: "#DD8FA0",
+    marginBottom: 30,
   },
   logo: {
     width: 250,
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     fontWeight: "700",
     letterSpacing: 1,
     textTransform: "uppercase",
-    color: "#4d1e68",
+    color: "#4A3840",
     textAlign: "center",
   },
   title: {
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
   description: {
     fontSize: 16,
     lineHeight: 24,
-    color: "#4d1e68",
+    color:  "#4A3840",
     textAlign: "center",
   },
   card1: {
@@ -88,28 +88,30 @@ const styles = StyleSheet.create({
     padding: 50,
     borderRadius: 20,
     backgroundColor: "#ffffff",
+    marginBottom: 30,
   },
   card2: {
     gap: 8,
     padding: 50,
     borderRadius: 20,
     backgroundColor: "#ffffff",
+    marginBottom: 30,
   },
   cardTitle: {
     fontSize: 30,
     fontWeight: "700",
-    color: "#bb6be9",
+    color:  "#C96B88",
   },
   cardItem: {
     fontSize: 15,
-    color: "#0a0a0a",
+    color:  "#4A3840",
   },
   button: {
     paddingVertical: 16,
     paddingHorizontal: 20,
     borderRadius: 16,
     alignItems: "center",
-    backgroundColor: "#733b94",
+    backgroundColor: "#C96B88",
   },
   buttonText: {
     fontSize: 16,

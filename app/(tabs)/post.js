@@ -124,7 +124,7 @@ export default function FilmesCriarScreen() {
 const styles = StyleSheet.create({
   safeArea: { 
     flex: 1, 
-    backgroundColor: "#e8bfff" 
+    backgroundColor: "#fbf6e5"
 },
   conteudo: { 
     padding: 24, 
@@ -136,28 +136,28 @@ const styles = StyleSheet.create({
   tituloPagina: { 
     fontSize: 24, 
     fontWeight: "800", 
-    color: "#4e2466" 
+    color:   "#4A3840"
 },
   subtitulo: { 
     fontSize: 14, 
-    color: "#4e2466", 
+    color: "#C96B88", 
     marginTop: 2 },
   secao: {
     fontSize: 14,
     fontWeight: "700",
-    color: "#4e2466",
+    color:  "#C96B88",
     marginTop: 8,
     marginBottom: 8,
   },
   rotulo: { 
     fontSize: 13, 
     fontWeight: "600", 
-    color: "#faf3fe", 
+    color:  "#4A3840", 
     marginBottom: 4 
 },
   campo: {
     borderWidth: 1,
-    borderColor: "#4e2466",
+    borderColor:  "#E9B39B",
     borderRadius: 8,
     paddingHorizontal: 12,
     paddingVertical: 10,
@@ -165,10 +165,13 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
   },
   botao: {
-    backgroundColor: "#4e2466",
+    backgroundColor: "#C96B88",
     paddingVertical: 14,
     borderRadius: 10,
     alignItems: "center",
   },
-  botaoTexto: { color: "white", fontWeight: "700" },
+  botaoTexto: { 
+    color: "white", 
+    fontWeight: "700" 
+  },
 });
