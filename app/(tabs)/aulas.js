@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   description: {
     fontSize: 16,
     lineHeight: 24,
-    color: "#f7e9ff",
+    color: "#4e2466",
   },
   list: {
     gap: 12,

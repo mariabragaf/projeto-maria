@@ -43,7 +43,7 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: "#f8fbff",
+    backgroundColor: "#e8bfff",
   },
   container: {
     flex: 1,
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     gap: 10,
     padding: 24,
     borderRadius: 24,
-    backgroundColor: "#0f62fe",
+    backgroundColor: "#bb6be9",
   },
   logo: {
     width: 120,
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     fontWeight: "700",
     letterSpacing: 1,
     textTransform: "uppercase",
-    color: "#d0e2ff",
+    color: "#bb6be9",
     textAlign: "center",
   },
   title: {
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   description: {
     fontSize: 16,
     lineHeight: 24,
-    color: "#edf5ff",
+    color: "#4d1e68",
     textAlign: "center",
   },
   card: {
@@ -91,18 +91,18 @@ const styles = StyleSheet.create({
   cardTitle: {
     fontSize: 18,
     fontWeight: "700",
-    color: "#102542",
+    color: "#bb6be9",
   },
   cardItem: {
     fontSize: 15,
-    color: "#334e68",
+    color: "#0a0a0a",
   },
   button: {
     paddingVertical: 16,
     paddingHorizontal: 20,
     borderRadius: 16,
     alignItems: "center",
-    backgroundColor: "#102542",
+    backgroundColor: "#733b94",
   },
   buttonText: {
     fontSize: 16,
