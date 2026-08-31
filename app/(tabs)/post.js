@@ -22,16 +22,16 @@ const api = axios.create({
   },
 });
 
-export default function HeroisCriarScreen() {
+export default function FilmesCriarScreen() {
   const [titulo, setTitulo] = useState("");
   const [imagemUrl, setImagemUrl] = useState("");
-  const [poder, setPoder] = useState("");
-  const [universo, setUniverso] = useState("");
-  const [fraqueza, setFraqueza] = useState("");
+  const [genero, setGenero] = useState("");
+  const [diretor, setDiretor] = useState("");
+  const [ano, setAno] = useState("");
 
   const [enviando, setEnviando] = useState(false);
 
-  async function criarHeroi() {
+  async function criarFilme() {
     if (!titulo) {
       Alert.alert("Preencha pelo menos o título.");
       return;
@@ -39,23 +39,23 @@ export default function HeroisCriarScreen() {
 
     setEnviando(true);
     try {
-      const resposta = await api.post("/api/herois", {
+      const resposta = await api.post("/api/filmes", {
         title: titulo,
         imageUrl: imagemUrl,
-        poder,
-        universo,
-        fraqueza,
+        genero,
+        diretor,
+        ano,
       });
 
-      Alert.alert("Herói criado!", resposta.data.title);
+      Alert.alert("Filme criado!", resposta.data.title);
       setTitulo("");
       setImagemUrl("");
-      setPoder("");
-      setUniverso("");
-      setFraqueza("");
+      setGenero("");
+      setDiretor("");
+      setAno("");
     } catch (e) {
       Alert.alert(
-        "Não deu pra criar o herói",
+        "Não deu pra criar o filme",
         "A API respondeu com erro. Confere se todos os campos estão certinhos e tenta de novo."
       );
     } finally {
@@ -67,8 +67,8 @@ export default function HeroisCriarScreen() {
     <SafeAreaView style={styles.safeArea}>
       <ScrollView contentContainerStyle={styles.conteudo}>
         <View style={styles.header}>
-          <Text style={styles.tituloPagina}>Criar herói</Text>
-          <Text style={styles.subtitulo}>POST /api/herois</Text>
+          <Text style={styles.tituloPagina}>Criar filme</Text>
+          <Text style={styles.subtitulo}>POST /api/filmes</Text>
         </View>
 
         <Text style={styles.rotulo}>Título</Text>
@@ -87,34 +87,34 @@ export default function HeroisCriarScreen() {
           placeholder="Ex: https://exemplo.com/batman.jpg"
         />
 
-        <Text style={styles.secao}>Campos específicos do tema heróis</Text>
+        <Text style={styles.secao}>Campos específicos do tema filmes</Text>
 
-        <Text style={styles.rotulo}>Poder</Text>
+        <Text style={styles.rotulo}>Gênero</Text>
         <TextInput
           style={styles.campo}
-          value={poder}
-          onChangeText={setPoder}
-          placeholder="Ex: Inteligência e estratégia"
+          value={genero}
+          onChangeText={setGenero}
+          placeholder="Ex: Ação"
         />
 
-        <Text style={styles.rotulo}>Universo</Text>
+        <Text style={styles.rotulo}>Diretor</Text>
         <TextInput
           style={styles.campo}
-          value={universo}
-          onChangeText={setUniverso}
-          placeholder="Ex: DC"
+          value={diretor}
+          onChangeText={setDiretor}
+          placeholder="Ex: Christopher Nolan"
         />
 
-        <Text style={styles.rotulo}>Fraqueza</Text>
+        <Text style={styles.rotulo}>Ano</Text>
         <TextInput
           style={styles.campo}
-          value={fraqueza}
-          onChangeText={setFraqueza}
-          placeholder="Ex: Humano sem poderes"
+          value={ano}
+          onChangeText={setAno}
+          placeholder="Ex: 2020"
         />
 
-        <Pressable style={styles.botao} onPress={criarHeroi} disabled={enviando}>
-          <Text style={styles.botaoTexto}>{enviando ? "Enviando..." : "Criar herói"}</Text>
+        <Pressable style={styles.botao} onPress={criarFilme} disabled={enviando}>
+          <Text style={styles.botaoTexto}>{enviando ? "Enviando..." : "Criar filme"}</Text>
         </Pressable>
       </ScrollView>
     </SafeAreaView>

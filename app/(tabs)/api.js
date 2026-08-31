@@ -21,50 +21,50 @@ const api = axios.create({
   },
 });
 
-export default function HeroisListarScreen() {
-  const [herois, setHerois] = useState([]);
+export default function FilmesListarScreen() {
+  const [filmes, setFilmes] = useState([]);
   const [carregando, setCarregando] = useState(true);
   const [erro, setErro] = useState(null);
 
-  async function buscarHerois() {
+  async function buscarFilmes() {
     setCarregando(true);
     setErro(null);
     try {
-      const resposta = await api.get("/api/herois", {
+      const resposta = await api.get("/api/filmes", {
         params: { limit: 50 },
       });
 
-      setHerois(resposta.data.data);
+      setFilmes(resposta.data.data);
     } catch (e) {
-      setErro("Não foi possível carregar os heróis. Tenta de novo em instantes.");
+      setErro("Não foi possível carregar os filmes. Tenta de novo em instantes.");
     } finally {
       setCarregando(false);
     }
   }
 
   useEffect(() => {
-    buscarHerois();
+    buscarFilmes();
   }, []);
 
   return (
     <SafeAreaView style={styles.safeArea}>
       <ScrollView contentContainerStyle={styles.conteudo}>
         <View style={styles.header}>
-          <Text style={styles.tituloPagina}>Listar heróis</Text>
-          <Text style={styles.subtitulo}>GET /api/herois</Text>
+          <Text style={styles.tituloPagina}>Listar filmes</Text>
+          <Text style={styles.subtitulo}>GET /api/filmes</Text>
         </View>
 
         {carregando && <ActivityIndicator style={{ marginVertical: 16 }} />}
         {erro && <Text style={styles.erro}>{erro}</Text>}
 
         {!carregando &&
-          herois.map((item) => (
+          filmes.map((item) => (
             <View key={item.id} style={styles.card}>
               <Image source={{ uri: item.imageUrl }} style={styles.imagem} />
               <View style={styles.info}>
                 <Text style={styles.titulo}>{item.title}</Text>
                 <Text style={styles.categoria}>
-                  {item.universo} · {item.poder}
+                  {item.genero} · {item.diretor} · {item.ano}
                 </Text>
               </View>
             </View>

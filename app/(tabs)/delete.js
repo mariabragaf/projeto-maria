@@ -24,58 +24,58 @@ const api = axios.create({
 });
 
 
-export default function HeroisExcluirScreen() {
-    const [herois, setHerois] = useState([]);
+export default function FilmesExcluirScreen() {
+    const [filmes, setFilmes] = useState([]);
     const [carregando, setCarregando] = useState(true);
     const [erro, setErro] = useState(null);
 
     const [excluindoId, setExcluindoId] = useState(null);
 
-    async function buscarHerois() {
+    async function buscarFilmes() {
         setCarregando(true);
         setErro(null);
         try {
-            const resposta = await api.get("/api/herois", {
+            const resposta = await api.get("/api/filmes", {
                 params: { limit: 50 },
             });
-            setHerois(resposta.data.data);
+            setFilmes(resposta.data.data);
         } catch (e) {
-            setErro("Não foi possível carregar os heróis. Tenta de novo em instantes.");
+            setErro("Não foi possível carregar os filmes. Tenta de novo em instantes.");
         } finally {
             setCarregando(false);
         }
     }
 
     useEffect(() => {
-        buscarHerois();
+        buscarFilmes();
     }, []);
 
-    function confirmarExclusao(heroi) {
+    function confirmarExclusao(filme) {
         Alert.alert(
-            "Excluir herói",
-            `Tem certeza que quer excluir "${heroi.title}"? Essa ação não pode ser desfeita.`,
+            "Excluir filme",
+            `Tem certeza que quer excluir "${filme.title}"? Essa ação não pode ser desfeita.`,
             [
                 { text: "Cancelar", style: "cancel" },
                 {
                     text: "Excluir",
                     style: "destructive",
-                    onPress: () => excluirHeroi(heroi.id),
+                    onPress: () => excluirFilme(filme.id),
                 },
             ]
         );
     }
 
-    async function excluirHeroi(id) {
+    async function excluirFilme(id) {
         setExcluindoId(id);
         try {
 
-            await api.delete(`/api/herois/${id}`);
+            await api.delete(`/api/filmes/${id}`);
 
 
-            setHerois((atual) => atual.filter((item) => item.id !== id));
+            setFilmes((atual) => atual.filter((item) => item.id !== id));
         } catch (e) {
             Alert.alert(
-                "Não deu pra excluir o herói",
+                "Não deu pra excluir o filme",
                 "A API respondeu com erro. Tenta de novo em instantes."
             );
         } finally {
@@ -87,21 +87,21 @@ export default function HeroisExcluirScreen() {
         <SafeAreaView style={styles.safeArea}>
             <ScrollView contentContainerStyle={styles.conteudo}>
                 <View style={styles.header}>
-                    <Text style={styles.tituloPagina}>Excluir herói</Text>
-                    <Text style={styles.subtitulo}>DELETE /api/herois/:id</Text>
+                    <Text style={styles.tituloPagina}>Excluir filme</Text>
+                    <Text style={styles.subtitulo}>DELETE /api/filmes/:id</Text>
                 </View>
 
                 {carregando && <ActivityIndicator style={{ marginVertical: 16 }} />}
                 {erro && <Text style={styles.erro}>{erro}</Text>}
 
                 {!carregando &&
-                    herois.map((item) => (
+                    filmes.map((item) => (
                         <View key={item.id} style={styles.card}>
                             <Image source={{ uri: item.imageUrl }} style={styles.imagem} />
                             <View style={styles.info}>
                                 <Text style={styles.titulo}>{item.title}</Text>
                                 <Text style={styles.categoria}>
-                                    {item.universo} · {item.poder}
+                                    {item.diretor} · {item.genero} · {item.ano}
                                 </Text>
                             </View>
                             <Pressable
